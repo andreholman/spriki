@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class WikiApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(WikiApplication.class, args);
 	}
@@ -25,7 +24,6 @@ public class WikiApplication {
 			for (String beanName : beanNames) {
 				System.out.println(beanName);
 			}
-
 		};
 	}
 }
