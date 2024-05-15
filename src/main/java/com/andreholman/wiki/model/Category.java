@@ -24,7 +24,23 @@ public class Category {
     private String name;
     @ManyToMany
     @JoinTable(name = "article_categories",
-            joinColumns = @JoinColumn(name = "category_id"),
-            inverseJoinColumns = @JoinColumn(name = "article_id"))
+            joinColumns = @JoinColumn(name = "category_id", nullable=true),
+            inverseJoinColumns = @JoinColumn(name = "article_id", nullable=true))
     private Set<Article> articles = new HashSet<Article>();
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Set<Article> getArticles() {
+        return articles;
+    }
 }
