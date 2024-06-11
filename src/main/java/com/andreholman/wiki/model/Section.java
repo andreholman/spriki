@@ -19,8 +19,28 @@ public class Section {
     @ManyToOne
     @JoinColumn(name="SECTION_ARTICLE")
     private Article article;
+
     @Column(name="TITLE", length=64, nullable=false, unique=false)
     private String title;
+
     @Column(name="CONTENT", columnDefinition="text")
     private String content;
+
+    public Section() {}
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getContent() {
+        return content;
+    }
 }

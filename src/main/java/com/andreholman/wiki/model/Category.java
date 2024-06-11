@@ -43,4 +43,9 @@ public class Category {
     public Set<Article> getArticles() {
         return articles;
     }
+
+    public Set<Article> addArticle(Article newArticle) {
+        articles.add(newArticle);
+        return articles;
+    }
 }

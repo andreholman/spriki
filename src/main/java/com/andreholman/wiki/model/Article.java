@@ -31,4 +31,35 @@ public class Article {
     private Set<Section> contents = new HashSet<Section>();
 
     public Article() {}
+
+    public String getTitle() {
+        return this.title;
+    }
+    
+    public Set<Category> getCategories() {
+        return this.categories;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public boolean setTitle(String title) {
+        this.title = title;
+        return true; // Validate title in the future.
+    }
+
+    public boolean setDescription(String description) {
+        this.description = description;
+        return true; // Validate description in the future.
+    }
+    
+    public Set<Section> getContents() {
+        return contents;
+    }
+
+    public Set<Section> addSection(Section newSection) {
+        contents.add(newSection);
+        return contents;
+    }
 }
